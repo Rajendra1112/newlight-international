@@ -1,0 +1,275 @@
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $black-color;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+.primary-btn {
+  @include manrope-font(1.6rem, 500, normal);
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  padding: 0.8rem 1.6rem;
+  color: white;
+  background: $secondary-color;
+  cursor: pointer;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  &::after {
+    content: "\f061";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+  }
+}
+
+.secondary-btn {
+  @include manrope-font(1.6rem, 500, normal);
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  padding: 0.8rem 1.6rem;
+  color: white;
+  background: $secondary-color;
+  cursor: pointer;
+}
+
+.banner-heading {
+  @include manrope-font(4rem, 500, normal);
+  color: $white-color;
+  text-align: center;
+}
+
+.banner-sub-heading {
+  @include manrope-font(1.6rem, 400, normal);
+  color: $white-color;
+  text-align: center;
+}
+
+section,
+footer {
+  padding: 5rem 0;
+}
+
+.section-heading {
+  @include manrope-font(4rem, 600, 5rem);
+  span {
+    color: $secondary-color;
+  }
+}
+
+.section-sub-heading {
+  @include manrope-font(1.4rem, 500, normal);
+}
+
+// common class for description
+.section-description {
+  p {
+    margin-bottom: 20px !important;
+    @include manrope-font(1.6rem, 400, 2.5rem);
+    text-align: justify;
+    &:last-child {
+      margin-bottom: 0px !important;
+    }
+    a {
+      font-weight: 500;
+      font-style: italic;
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+    img {
+      margin: 20px 0px;
+      width: 100%;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600 !important;
+    margin: 20px 0px !important;
+    color: $primary-color;
+  }
+  h1 {
+    font-size: 20px !important;
+    line-height: 30px !important;
+  }
+  h2 {
+    font-size: 18px !important;
+    line-height: 26px !important;
+  }
+  h3 {
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+  h4 {
+    font-size: 24px !important;
+    line-height: 22px !important;
+  }
+  h5 {
+    font-size: 12px !important;
+    line-height: 20px !important;
+  }
+  h6 {
+    font-size: 10px !important;
+    line-height: 18px !important;
+  }
+  ol {
+    margin: 20px !important;
+    list-style: decimal;
+    li {
+      font-weight: 500;
+      padding: 5px 0px;
+      font-family: Karla;
+      color: #5a5454;
+      display: list-item;
+      a {
+        color: $primary-color !important;
+
+        &:hover {
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+  ul {
+    margin: 20px !important;
+    list-style: disc;
+    li {
+      font-weight: 400;
+      padding: 5px 0px;
+      display: list-item;
+      color: #5a5454;
+      font-family: "Manrope", sans-serif;
+      a {
+        color: $primary-color !important;
+        &:hover {
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+  blockquote {
+    margin: 40px 0px;
+    padding: 20px 30px;
+    border-left: 5px solid $primary-color;
+    background: #eff7f3;
+    p {
+      color: #242222;
+      text-align: justify;
+      font-family: "Manrope", sans-serif;
+      font-size: 18px !important;
+      font-weight: 500;
+      line-height: 26px !important;
+      margin-bottom: 0px !important;
+      letter-spacing: 0.1px;
+      &::before {
+        content: "\f10d";
+        font-family: "Font Awesome 5 free";
+        font-weight: 900;
+        font-size: 30px;
+        padding-right: 10px;
+        line-height: 25px;
+        color: $primary-color;
+        display: block;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+.card {
+  border-radius: 0.9rem;
+  padding: 2rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+  img {
+    border-radius: 0.9rem;
+  }
+  .card-body {
+    .card-title {
+      @include manrope-font(2.2rem, 600, normal);
+    }
+    .card-text {
+      @include manrope-font(1.6rem, 400, normal);
+      @include line-clamp(3);
+    }
+  }
+}
+
+.owl-carousel {
+  .card {
+    margin: 1rem;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+      .card-title {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  .owl-dots {
+    .owl-dot {
+      span {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      &:hover {
+        span {
+          background: $primary-color;
+        }
+      }
+    }
+
+    .owl-dot.active {
+      span {
+        background: $primary-color;
+      }
+    }
+  }
+}
+
+// common class in blog section
+.blog-section {
+  .card {
+    .date,
+    figcaption {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+      @include manrope-font(1.4rem, 300, normal);
+      color: #6d6d6d;
+      margin-bottom: 2rem;
+    }
+
+    .card-body {
+      padding: 2rem;
+      text-align: start;
+      color: $black-color;
+      .card-title {
+        @include manrope-font(2.4rem, 600, 3rem);
+        margin-bottom: 2rem;
+      }
+      .primary-btn {
+        background: none;
+        color: $secondary-color;
+        padding-left: 0;
+      }
+    }
+  }
+}

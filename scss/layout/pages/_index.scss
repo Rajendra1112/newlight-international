@@ -1,0 +1,591 @@
+// banner section styling
+.banner-section {
+  position: relative;
+  figure {
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
+    figcaption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  form {
+    width: 70vw;
+    margin: 0 auto;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    .container {
+      .row {
+        div {
+          height: 4.8rem;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          @include manrope-font(1.4rem, 400, normal);
+          input {
+            width: 80%;
+            height: 100%;
+            outline: none;
+            border: none;
+            border-radius: 0;
+            background: #d9d9d9;
+            padding-right: 1rem;
+          }
+          i {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #d9d9d9;
+          }
+          button {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 0;
+          }
+        }
+        div:first-child {
+          i {
+            border-radius: 0.4rem 0 0 0.4rem;
+          }
+        }
+        div:nth-child(2) {
+          border-left: 1px solid $light-gray-color;
+        }
+        div:last-child {
+          button {
+            border-radius: 0 0.4rem 0.4rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// difference section styling
+.difference-section {
+  .container {
+    .row {
+      .difference-video-col {
+        padding: 1rem;
+        figure {
+          width: 90%;
+          overflow: visible;
+          margin-left: auto;
+          margin-top: 1rem;
+          position: relative;
+          img {
+            border-radius: 50%;
+            box-shadow: -5rem -2rem 0rem $ternary-color;
+          }
+          a {
+            width: 8.3rem;
+            height: 8.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $primary-color;
+            border-radius: 50%;
+            filter: drop-shadow(0px 0px 9px rgba(0, 0, 0, 0.45));
+            position: absolute;
+            right: 5%;
+            bottom: 5%;
+            transform: translate(-5%, -5%);
+            transition: all 0.3s ease-in-out;
+            i {
+              font-size: 3rem;
+              color: $white-color;
+            }
+            &:hover {
+              background: $secondary-color;
+            }
+          }
+        }
+      }
+
+      .difference-stats-col {
+        .section-description {
+          p {
+            @include line-clamp(2);
+          }
+        }
+
+        .progress-section {
+          border-bottom: 1px solid $light-gray-color;
+          .task-progress {
+            margin: 1.5rem 0;
+          }
+
+          .task-progress p {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include manrope-font(1.4rem, 500, 2.5rem);
+          }
+
+          .progress {
+            width: 100%;
+            -webkit-appearance: none;
+            appearance: none;
+            border: none;
+            border-radius: 10px;
+            height: 10px;
+          }
+
+          .progress::-webkit-progress-bar {
+            background-color: #c7c7c7;
+          }
+
+          .progress::-webkit-progress-bar,
+          .progress::-webkit-progress-value {
+            border-radius: 10px;
+          }
+
+          .progress::-moz-progress-bar {
+            border-radius: 10px;
+          }
+
+          .progress1::-webkit-progress-value {
+            background: $secondary-color;
+          }
+
+          .progress2::-webkit-progress-value {
+            background: $secondary-color;
+          }
+        }
+
+        .philosophy-resources-section {
+          .pr-box {
+            display: flex;
+            column-gap: 1rem;
+            padding-right: 1rem;
+            i {
+              color: $secondary-color;
+              padding-top: 0.2rem;
+              font-size: 2rem;
+            }
+          }
+          .section-description {
+            .pr-title {
+              @include manrope-font(1.6rem, 700, normal);
+            }
+            p {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// message seciton styling
+.message-section {
+  .container {
+    .row {
+      .nav {
+        margin: 0 !important;
+        .row {
+          row-gap: 1.5rem;
+          .nav-link {
+            padding: 0;
+            border-radius: 1.6rem !important;
+            transition: all 0.3s ease-in-out;
+            figure {
+              border-radius: 1.6rem;
+            }
+          }
+          .nav-link.active {
+            padding: 0.5rem !important;
+            background: $primary-color !important;
+          }
+        }
+      }
+
+      .tab-content {
+        .tab-pane {
+          .container {
+            .message-card {
+              background: $secondary-color;
+              border-radius: 1.3rem;
+              color: $white-color;
+              padding: 2rem;
+              div:first-child {
+                .person-name {
+                  @include manrope-font(2rem, 600, normal);
+                  letter-spacing: -0.4px;
+                }
+              }
+              div:last-child {
+                figure {
+                  width: 6.4rem;
+                  height: 5.8rem;
+                  margin: 0 auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// country-section-styling
+.country-section {
+  position: relative;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 43.6rem;
+    background: $ternary-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .container {
+    .row {
+      .section-description {
+        p {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .country-card {
+      position: relative;
+      .card-body {
+        .card-title {
+          margin: 3rem 0 2rem;
+        }
+        .card-text {
+          text-align: justify;
+        }
+      }
+      .country-flag {
+        width: 6.3rem;
+        height: 6.3rem;
+        position: absolute;
+        top: 53%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+// vacancy-section-styling
+.vacancy-section {
+  .container {
+    .row {
+      row-gap: 1.5rem;
+      .vacancy-card {
+        figure {
+          position: relative;
+          figcaption {
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include manrope-font(2.4rem, 500, 4.812rem);
+            display: flex;
+            flex-direction: column;
+            white-space: nowrap;
+            z-index: 2;
+            transition: all 0.4s ease-in-out;
+            .vacancy-title,
+            a {
+              color: $white-color;
+              transition: all 1.2s ease-in-out;
+            }
+          }
+          &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #00000090;
+          }
+
+          &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 0.2rem solid $white-color;
+            z-index: 1;
+            opacity: 0;
+            transition: all 0.8s ease-in-out;
+          }
+          &:hover {
+            figcaption {
+              top: 50%;
+              a {
+                color: $secondary-color;
+              }
+            }
+
+            &::before {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// service section styling
+.service-section {
+  position: relative;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 36.6rem;
+    background: $ternary-color;
+    position: absolute;
+    top: 47%;
+    left: 0;
+    // transform: translate(0, -50%);
+    z-index: -1;
+  }
+
+  .container {
+    .service-carousel {
+      position: relative;
+
+      .service-card {
+        position: relative;
+
+        .card-body {
+          text-align: center;
+          .card-title {
+            margin: 5rem 0 2rem 0;
+          }
+          .card-text {
+            margin-bottom: 2rem;
+            @include line-clamp(2);
+          }
+        }
+
+        .primary-btn {
+          margin: 0 auto;
+        }
+
+        .card-icon {
+          width: 10rem;
+          height: 10rem;
+          background: $secondary-color;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          img {
+            width: 5.7rem;
+            height: 5.7rem;
+          }
+        }
+      }
+
+      .owl-nav {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .owl-prev,
+        .owl-next {
+          span {
+            width: 3.4rem;
+            height: 3.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $primary-color;
+            color: white;
+            padding-bottom: 1.2rem;
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+
+    .stat-row {
+      background: #fa8927;
+      border-radius: 0.6rem;
+      padding: 4rem 3rem;
+      .stats {
+        text-align: center;
+        border-right: 1px solid $white-color;
+        .stat-number {
+          color: $white-color;
+          @include manrope-font(3.2rem, 600, normal);
+          margin-bottom: 2rem;
+        }
+        .stat-title {
+          color: $white-color;
+          @include manrope-font(2.4rem, 400, normal);
+        }
+      }
+
+      > div:last-child {
+        .stats {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+
+// blog section styling
+.blog-section {
+  .container {
+    .blog-list-content {
+      .nav {
+        row-gap: 2.5rem;
+        order: 1;
+        .nav-link {
+          border-radius: 1rem;
+          padding: 1rem;
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+          padding: 0;
+          transition: all 0.3s ease-in-out;
+          .card {
+            flex-direction: row;
+            padding: 0;
+            figure {
+              width: 21.7rem;
+              img {
+                border-radius: 0.9rem 0 0 0.9rem;
+              }
+            }
+          }
+        }
+        .nav-link.active {
+          padding: 1rem;
+          background: $primary-color;
+        }
+      }
+      .tab-content {
+        .tab-pane {
+          .card {
+            padding: 0;
+            figure {
+              position: relative;
+              margin-bottom: 2rem;
+              img {
+                border-radius: 0;
+              }
+              figcaption {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: $white-color;
+                padding: 1rem 2rem;
+                margin: 0;
+                border-radius: 0 1rem 0 0;
+              }
+            }
+
+            .card-text {
+              margin-bottom: 2rem;
+            }
+          }
+        }
+      }
+      > div:first-child {
+        order: 1;
+      }
+    }
+  }
+}
+
+// testimonial section styling
+.testimonial-section {
+  .container {
+    .testimonial-card {
+      position: relative;
+      border-radius: 0;
+      padding: 0;
+      padding-top: 6rem;
+      &::after {
+        content: url("../images/quotation2-img.svg");
+        display: inline-block;
+        width: 12.8rem;
+        height: 12.8rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        margin: 1rem;
+      }
+
+      .card-body {
+        z-index: 2;
+        padding: 0;
+        @include manrope-font(1.6rem, 400, 2.4rem);
+        blockquote {
+          border-left: 0.6rem solid $secondary-color;
+          padding: 2rem;
+          .testimonial-title {
+            color: #3b51a8;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+          }
+          .testimonial {
+            text-align: justify;
+          }
+        }
+
+        .testimonial-person {
+          margin-left: 2.6rem;
+          margin-bottom: 2rem;
+          figure {
+            width: 8rem;
+            height: 8rem;
+            img {
+              border-radius: 50%;
+            }
+            margin-bottom: 2rem;
+          }
+          .testimonial-person-name {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+.partner-section {
+  background: $ternary-color;
+}

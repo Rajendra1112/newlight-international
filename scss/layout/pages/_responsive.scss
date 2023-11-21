@@ -1,0 +1,48 @@
+// 1024px
+@media (max-width: 1024px) {
+  header {
+    .top-header {
+      .container {
+        .row {
+          ul {
+            row-gap: 1rem;
+          }
+        }
+      }
+    }
+    .navigation-bar {
+      nav {
+        .container {
+          #navbarSupportedContent {
+            width: 85vw;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .container {
+      .row {
+        > div:nth-child(even) {
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// 991px
+@media (max-width: 991px) {
+  header {
+    .navigation-bar {
+      nav {
+        .container {
+          #navbarSupportedContent {
+            width: 85vw;
+          }
+        }
+      }
+    }
+  }
+}

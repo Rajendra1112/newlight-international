@@ -1,0 +1,13 @@
+@mixin manrope-font($size, $weight, $height) {
+  font-family: "Manrope", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+@mixin line-clamp($line-no) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line-no;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

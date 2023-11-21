@@ -1,0 +1,117 @@
+footer {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 19, 37, 0.75) 0%,
+      rgba(0, 19, 37, 0.75) 100%
+    ),
+    url("../images/footer-img.jpg"), lightgray 50% / cover no-repeat;
+  background-position: center;
+  color: $white-color;
+  .container {
+    .row {
+      margin-bottom: 2rem;
+      .footer-title {
+        @include manrope-font(1.8rem, 700, normal);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+      }
+
+      p,
+      li {
+        @include manrope-font(1.8rem, 400, 2.6rem);
+        letter-spacing: 0.18px;
+      }
+
+      p {
+        text-align: justify;
+        @include line-clamp(4);
+        margin-bottom: 2rem;
+      }
+      .primary-btn {
+        background: none;
+        padding: 0;
+        color: $secondary-color;
+      }
+      ul {
+        padding: 0;
+        list-style: none;
+        li {
+          margin-bottom: 2rem;
+          a {
+            color: $white-color;
+          }
+        }
+      }
+      > div:nth-child(3) {
+        ul {
+          li {
+            display: flex;
+            align-items: center;
+            column-gap: 3rem;
+          }
+        }
+      }
+    }
+
+    .social-media-row {
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 3rem;
+        position: relative;
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 40%;
+          height: 0.1rem;
+          background: $white-color;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+        }
+
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 40%;
+          height: 0.1rem;
+          background: $white-color;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(0, -50%);
+        }
+        li {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .lower-footer-row {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0;
+      a {
+        width: max-content;
+        margin-bottom: 2rem;
+        figure {
+          width: 8rem;
+        }
+      }
+
+      p {
+        width: max-content;
+        a {
+          color: $white-color;
+          font-weight: bold;
+        }
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
